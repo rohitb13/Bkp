@@ -1,0 +1,86 @@
+Jfrog-Jenkins Integration
+------------------------------------------------------------
+
+Download Java JDK and JRE:
+
+for JDK: https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
+for JRE: https://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+Install in the C drive, make sure you change change location to C:\java\ for jdk and jre
+
+Set environment variables under system variable:
+
+JAVA_HOME=C:\java\jdk-***\
+JRE_HOME=C:\java\jre-***\
+
+Download Jfrog Artifactory 
+https://jfrog.com/open-source/      choose Zip file from bottom
+or
+https://api.bintray.com/content/jfrog/artifactory/jfrog-artifactory-oss-$latest.zip;bt_package=jfrog-artifactory-oss-zip
+
+unzip files in the C drive
+c:/artifactory-oss-***
+
+Open CMD as Administrator
+
+cd \artifactory-oss-***\bin
+
+$ artifactory.bat
+
+IF you get any error then
+
+go to C:\Windows\system32\ and copy findstr.exe file.
+paste this file into the location C:\java\jdk***\bin , C:\artifactory-oss-***\bin and C:\java\jre***\bin
+
+
+once you successfully executed artifactory.bat file then access Jfrog artifactory url
+
+http://localhost:8081/artifactory/
+
+deault user name: admin
+password: password
+
+---------------------------------
+
+Jfrog URL: right corner->admin->local repository->choose package type maven and create 2 repo
+jenkins-release
+jenkins-snapshot
+----------------------------------
+Install Plugin on Jenkins:
+Manage Plugins: Artifactory 
+-------------------------------
+Integrate Jenkins Jfrog:
+Manage Jenkins->Configure System->Artifactory->
+
+Server ID:jfrog-artifactory
+URL: <Jfrog URL>      ex: http://localhost:8081/artifactory
+User Name: admin
+Password: password
+ then test connection
+
+------------------------------------------------------
+Create a Maven Project:
+
+
+Source Code URL: provide github url
+
+Build Section: goal should be- package
+----------------------------------------------
+
+Post build Action: 
+
+Archive the artifact: **/*.war
+
+Deploy Artifact to Artifactory: select or type both the jenkins-release, jenkins-snapshot repo name
+
+Just check following options:
+deploy maven artifact,	Filter excluded artifacts from build Info, Capture and publish build info, Include environment variables
+
+save your job and build.
+---------------------------------------------------
+artifacts should have uploaded to the jfrog repo
+
+
+
+
+

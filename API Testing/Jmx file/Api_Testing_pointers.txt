@@ -1,0 +1,48 @@
+Test cases
+
+Generic tests
+1) For each api Check response status code,content length and body.
+2) Check for response headers - Connection:Keep-alive,Cache-Control,Content-Type,Accepts.
+3) Check server responses when request headers are not set properly.
+4) Check with set cookies are incorrect or outdated. 
+5) Check api for incorrect session token/session token not set in request body.
+6) Check api for outdate session token. 
+
+Functionality Related - 
+
+7) Check expected request/response as per api documentation.
+	- Check data persistence on server after a post/put request, by quering a get request.
+	- Check all expected status codes. 
+	- Check server response content length > 0
+	- Check server response body has all required fields. 
+	- Check server response body for a particular field. 
+	- Check expected error message,error codes in server response as per api documentation.        
+
+-----------------------------------------------
+Status code series -
+
+1xx: Informational
+2xx: Success
+3xx: Redirection
+4xx: Client Error
+5xx: Server Error
+
+-----------------------------------------------
+
+According to the HTTP/1.1 Spec:
+
+The POST method is used to request that the origin server accept the entity enclosed in the request as a new subordinate of the resource
+identified by the Request-URI in the Request-Line
+
+In other words, POST is used to create.
+
+
+The PUT method requests that the enclosed entity be stored under the supplied Request-URI.
+If the Request-URI refers to an already existing resource, the enclosed entity SHOULD be considered
+as a modified version of the one residing on the origin server. If the Request-URI does not point to
+an existing resource, and that URI is capable of being defined as a new resource by the requesting user agent,
+the origin server can create the resource with that URI."
+
+That is, PUT is used to create or update.
+
+----------------------------------------------

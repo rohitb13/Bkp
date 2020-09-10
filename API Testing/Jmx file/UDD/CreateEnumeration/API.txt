@@ -1,0 +1,25 @@
+Requst : POST
+URL    : https://udd.kpit.com/UDD/api/enumeration?profile=TOOLTIP
+Header : Content-Type  : application/json
+Body   : 
+
+{
+   "shortName":"ENUMERATION04",
+   "description":"ENUMERATION04",
+   "values":[
+      {
+         "value":1,
+         "description":"ENUMERATION04",
+         "text":"ENUMERATION04_Name"
+      }
+   ],
+   "longName":"ENUMERATION04",
+   "autosarPath":"/FCADataDefinition/AppDatatypes/ADTSENUMERATION04",
+   "bitValues":[
+
+   ],
+   "bitStatus":"N",
+   "changeSetId":70691,
+   "categoryId":"AS",
+   "workspaceId":563
+}

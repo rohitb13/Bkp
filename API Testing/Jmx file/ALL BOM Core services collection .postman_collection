@@ -1,0 +1,1112 @@
+{
+	"info": {
+		"_postman_id": "c1ca559c-2253-46ba-99c1-e5e39a99cb29",
+		"name": "BOM Workspace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Workspace Collection",
+			"item": [
+				{
+					"name": "WORKSPACE GET BOM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [3],\n    \"bomType\": \"WS\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace SAVE BOM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elements\": [\n        {\n            \"id\": 1,\n            \"inf\": [\n                {\n                    \"cat\": \"DE\",\n                    \"id\": 1,\n                    \"sn\": \"DE1\",\n                    \"vid\": 1,\n                    \"es\": \"U\",\n                    \"ver\": \"_\",\n                    \"ts\": 123,\n                    \"isf\": \"N\",\n                    \"iid\": 1,\n                    \"isg\": 1,\n                    \"dps\": [\n                        {\n                            \"cat\": \"EN\",\n                            \"id\": 1,\n                            \"sn\": \"ENUM1\",\n                            \"vid\": 1,\n                            \"dtc\": \"AS\",\n                            \"es\": \"L\",\n                            \"ver\": \"1\",\n                            \"ts\": 1213\n                        }\n                    ],\n                    \"pts\": [\n                        1\n                    ]\n                }\n            ],\n            \"swc\": [\n                {\n                    \"id\": 1,\n                    \"sn\": \"SWC1\",\n                    \"vid\": 1,\n                    \"cgi\": 1,\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1123\n                }\n            ],\n            \"fswc\": [\n                {\n                    \"id\": 1,\n                    \"sn\": \"FSWC1\",\n                    \"vid\": 1,\n                    \"cgi\": 1,\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1123\n                }\n            ],\n            \"dt\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 1,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                },\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 2,\n                    \"sn\": \"ENUM2\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WORKSPACE SAVE DE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"DE\",\n    \"elements\": [\n        {\n            \"cat\": \"DE\",\n            \"id\": 1,\n            \"sn\": \"DE1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 1,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WORKSPACE GET DE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [3],\n    \"bomType\": \"WS\",\n    \"elemType\": \"DE\",\n    \"elemIds\":[1]\n   \n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Worksapce SAVE CS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"CS\",\n    \"elements\": [\n        {\n            \"cat\": \"CS\",\n            \"id\": 1,\n            \"sn\": \"CS1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 1,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace GET CS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [3],\n    \"bomType\": \"WS\",\n    \"elemType\": \"CS\",\n    \"elemIds\":[1]\n   \n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace SAVE MS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"MS\",\n    \"elements\": [\n        {\n            \"cat\": \"MS\",\n            \"id\": 1,\n            \"sn\": \"MS1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 1,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Worksapce GET MS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [3],\n    \"bomType\": \"WS\",\n    \"elemType\": \"MS\",\n    \"elemIds\":[1]\n   \n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WORKSPACE DELETE DE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"DE\",\n    \"elements\": [\n        {\n            \"cat\": \"DE\",\n            \"id\": 1,\n            \"sn\": \"DE1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 1,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace DELETE CS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"CS\",\n    \"elements\": [\n        {\n            \"cat\": \"CS\",\n            \"id\": 1,\n            \"sn\": \"CS1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 1,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace DELETE MS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"MS\",\n    \"elements\": [\n        {\n            \"cat\": \"MS\",\n            \"id\": 1,\n            \"sn\": \"MS1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 1,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace SAVE DataType",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"EN\",\n    \"elements\": [\n        {\n            \"cat\": \"EN\",\n            \"id\": 1,\n            \"sn\": \"ENUM1\",\n            \"vid\": 1,\n            \"dtc\": \"AS\",\n            \"es\": \"L\",\n            \"ver\": \"1\",\n            \"ts\": 1213\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace GET DataType",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [3],\n    \"bomType\": \"WS\",\n    \"elemType\": \"EN\",\n    \"elemIds\":[1]\n   \n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace DELETE DataType",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"EN\",\n    \"elements\": [\n        {\n            \"cat\": \"EN\",\n            \"id\": 1,\n            \"sn\": \"ENUM1\",\n            \"vid\": 1,\n            \"dtc\": \"AS\",\n            \"es\": \"L\",\n            \"ver\": \"1\",\n            \"ts\": 1213\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace SAVE FOUNDATION SWC ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"FND\",\n    \"elements\": [\n        {\n            \"id\": 1,\n            \"cat\":\"FND\",\n            \"sn\": \"FSWC1\",\n            \"vid\": 1,\n            \"cgi\": 1,\n            \"es\": \"L\",\n            \"ver\": \"1\",\n            \"ts\": 1123\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Worksapce GET FOUNDATION SWC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [3],\n    \"bomType\": \"WS\",\n    \"elemType\": \"FND\",\n    \"elemIds\":[1]\n   \n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Worksapce DELETE FOUNDATION SWC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"FND\",\n    \"elements\": [\n        {\n            \"id\": 1,\n            \"cat\":\"FND\",\n            \"sn\": \"FSWC1\",\n            \"vid\": 1,\n            \"cgi\": 1,\n            \"es\": \"L\",\n            \"ver\": \"1\",\n            \"ts\": 1123\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Worksapce SWC SAVE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"SWC\",\n    \"elements\": [\n        {\n            \"id\": 1,\n            \"cat\":\"SWC\",\n            \"sn\": \"SWC1\",\n            \"vid\": 1,\n            \"cgi\": 1,\n            \"es\": \"L\",\n            \"ver\": \"1\",\n            \"ts\": 1123\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Worksapce SWC GET",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [3],\n    \"bomType\": \"WS\",\n    \"elemType\": \"SWC\",\n    \"elemIds\":[1]\n   \n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workspace SWC DELETE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"WS\",\n    \"elemType\": \"SWC\",\n    \"elements\": [\n        {\n            \"id\": 1,\n            \"cat\":\"SWC\",\n            \"sn\": \"SWC1\",\n            \"vid\": 1,\n            \"cgi\": 1,\n            \"es\": \"L\",\n            \"ver\": \"1\",\n            \"ts\": 1123\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SWC Collection",
+			"item": [
+				{
+					"name": "SWC DELETE MS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 7,\n    \"bomType\": \"SWC\",\n    \"elemType\": \"MS\",\n    \"elements\": [\n        {\n            \"cat\": \"MS\",\n            \"id\": 1,\n            \"sn\": \"MS1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 2,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ],\n            \"pts\": [\n                1\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SWC DELETE CS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 7,\n    \"bomType\": \"SWC\",\n    \"elemType\": \"CS\",\n    \"elements\": [\n        {\n            \"cat\": \"CS\",\n            \"id\": 1,\n            \"sn\": \"CS1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 2,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ],\n            \"pts\": [\n                1\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SWC DELETE DE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 7,\n    \"bomType\": \"SWC\",\n    \"elemType\": \"DE\",\n    \"elements\": [\n        {\n            \"cat\": \"DE\",\n            \"id\": 1,\n            \"sn\": \"DE1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 1,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ],\n            \"pts\": [\n                1\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SWC DELETE MS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [7],\n    \"bomType\": \"SWC\",\n    \"elemType\": \"MS\",\n    \"elemIds\":[1]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SWC SAVE MS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 7,\n    \"bomType\": \"SWC\",\n    \"elemType\": \"MS\",\n    \"elements\": [\n        {\n            \"cat\": \"MS\",\n            \"id\": 1,\n            \"sn\": \"MS1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 2,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ],\n            \"pts\": [\n                1\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SWC GET CS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [7],\n    \"bomType\": \"SWC\",\n    \"elemType\": \"CS\",\n    \"elemIds\":[1]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SWC SAVE CS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 7,\n    \"bomType\": \"SWC\",\n    \"elemType\": \"CS\",\n    \"elements\": [\n        {\n            \"cat\": \"CS\",\n            \"id\": 1,\n            \"sn\": \"DE1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 2,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ],\n            \"pts\": [\n                1\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SWC GET DE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [7],\n    \"bomType\": \"SWC\",\n    \"elemType\": \"DE\",\n    \"elemIds\":[1]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SWC SAVE DE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 7,\n    \"bomType\": \"SWC\",\n    \"elemType\": \"DE\",\n    \"elements\": [\n        {\n            \"cat\": \"DE\",\n            \"id\": 1,\n            \"sn\": \"DE1\",\n            \"vid\": 1,\n            \"es\": \"U\",\n            \"ver\": \"_\",\n            \"ts\": 123,\n            \"isf\": \"N\",\n            \"iid\": 1,\n            \"isg\": 1,\n            \"dps\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 1,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ],\n            \"pts\": [\n                1\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SWC GET BOM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"bomIds\":[7],\r\n\"bomType\":\"SWC\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SWC Save BOM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 7,\n    \"bomType\": \"SWC\",\n    \"elements\": [\n        {\n            \"id\": 7,\n            \"inf\": [\n                {\n                    \"cat\": \"DE\",\n                    \"id\": 1,\n                    \"sn\": \"DE1\",\n                    \"vid\": 1,\n                    \"es\": \"U\",\n                    \"ver\": \"_\",\n                    \"ts\": 123,\n                    \"isf\": \"N\",\n                    \"iid\": 1,\n                    \"isg\": 1,\n                    \"dps\": [\n                        {\n                            \"cat\": \"EN\",\n                            \"id\": 1,\n                            \"sn\": \"ENUM1\",\n                            \"vid\": 1,\n                            \"dtc\": \"AS\",\n                            \"es\": \"L\",\n                            \"ver\": \"1\",\n                            \"ts\": 1213\n                        }\n                    ],\n                    \"pts\": [\n                        1\n                    ]\n                }\n            ],\n            \"fswc\": [\n                {\n                    \"id\": 1,\n                    \"sn\": \"FSWC1\",\n                    \"vid\": 1,\n                    \"cgi\": 1,\n                    \"es\": \"L\",\n                    \"ver\": 1,\n                    \"ts\": 1123\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BOM Integration",
+			"item": [
+				{
+					"name": "Integration GET BOM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomIds\": [3],\n    \"bomType\": \"INT\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Integration SAVE BOM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bomId\": 3,\n    \"bomType\": \"INT\",\n    \"elements\": [\n        {\n            \"id\": 1,\n            \"inf\": [\n                {\n                    \"cat\": \"DE\",\n                    \"id\": 1,\n                    \"sn\": \"DE1\",\n                    \"vid\": 1,\n                    \"es\": \"U\",\n                    \"ver\": \"_\",\n                    \"ts\": 123,\n                    \"isf\": \"N\",\n                    \"iid\": 1,\n                    \"isg\": 1,\n                    \"dps\": [\n                        {\n                            \"cat\": \"EN\",\n                            \"id\": 1,\n                            \"sn\": \"ENUM1\",\n                            \"vid\": 1,\n                            \"dtc\": \"AS\",\n                            \"es\": \"L\",\n                            \"ver\": \"1\",\n                            \"ts\": 1213\n                        }\n                    ],\n                    \"pts\": [\n                        1\n                    ]\n                }\n            ],\n            \"swc\": [\n                {\n                    \"id\": 1,\n                    \"sn\": \"SWC1\",\n                    \"vid\": 1,\n                    \"cgi\": 1,\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1123\n                }\n            ],\n            \"fswc\": [\n                {\n                    \"id\": 1,\n                    \"sn\": \"FSWC1\",\n                    \"vid\": 1,\n                    \"cgi\": 1,\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1123\n                }\n            ],\n            \"dt\": [\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 1,\n                    \"sn\": \"ENUM1\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                },\n                {\n                    \"cat\": \"EN\",\n                    \"id\": 2,\n                    \"sn\": \"ENUM2\",\n                    \"vid\": 1,\n                    \"dtc\": \"AS\",\n                    \"es\": \"L\",\n                    \"ver\": \"1\",\n                    \"ts\": 1213\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9080/UDD/api/bom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"UDD",
+								"api",
+								"bom",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
